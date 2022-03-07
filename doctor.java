@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class doctorlist
 {
-    String did, dname, specialist, appoint, doc_qual;
-    int droom;
+    String doc_id, doc_name, specialist, appoint, doc_qual;
+    int doc_room;
     void new_doctor()
     {
         @SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
         System.out.print("id:-");
-        did = input.nextLine();
+        doc_id = input.nextLine();
         System.out.print("name:-");
-        dname = input.nextLine();
+        doc_name = input.nextLine();
         System.out.print("specilization:-");
         specialist = input.nextLine();
         System.out.print("work time:-");
@@ -21,14 +21,13 @@ public class doctorlist
         System.out.print("qualification:-");
         doc_qual = input.nextLine();
         System.out.print("room no.:-");
-        droom = input.nextInt();
+        doc_room = input.nextInt();
     }
     void doctor_info()
     {
-        System.out.println(did + "\t" + dname + "  \t" + specialist + "     \t" + appoint + "    \t" + doc_qual + "       \t" + droom);
+        System.out.println(doc_id + "\t" + doc_name + "  \t" + specialist + "     \t" + appoint + "    \t" + doc_qual + "       \t" + doc_room);
     }
 }
-
 
 public class HospitalManagementSystem
 {
@@ -43,31 +42,34 @@ public class HospitalManagementSystem
         for (i = 0; i < 25; i++)
             d[i] = new doctorlist();
             
-         d[0].did = "21";
-        d[0].dname = "Dr.Ahi";
+         d[0].doc_id = "21";
+        d[0].doc_name = "Dr.Ahi";
         d[0].specialist = "ENT";
         d[0].appoint = "5-11AM";
         d[0].doc_qual = "MBBS,MD";
-        d[0].droom =   17;
-        d[1].did = "32";
-        d[1].dname = "Dr.Anjana";
+        d[0].doc_room =   17;
+        d[1].doc_id = "32";
+        d[1].doc_name = "Dr.Anjana";
         d[1].specialist = "Physician";
         d[1].appoint = "10AM-3PM";
         d[1].doc_qual = "MBBS,MD";
-        d[1].droom =  45;
-        d[2].did = "17";
-        d[2].dname = "Dr.Rekha";
+        d[1].doc_room =  45;
+        d[2].doc_id = "17";
+        d[2].doc_name = "Dr.Rekha";
         d[2].specialist = "Surgeon";
         d[2].appoint = "8AM-2AM";
         d[2].doc_qual = "BDM";
-        d[2].droom =   8;
+        d[2].doc_room =   8;
         
          @SuppressWarnings("resource")
 		Scanner input = new Scanner(System.in);
         int choice, j, c1, status = 1, s1 = 1;
          while (status == 1)
         {
-           
+            System.out.println("\n                                    MAIN MENU");
+             System.out.println("-----------------------------------------------------------------------------------");
+             System.out.println("1.Doctors ");
+             System.out.println("-----------------------------------------------------------------------------------");
             choice = input.nextInt();
        
             switch (choice)
